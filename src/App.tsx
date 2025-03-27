@@ -68,7 +68,7 @@ function App() {
               Hi, I'm <span className="bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-400">Shadrack Mwendwa</span>
             </h1>
             <p className="text-2xl mb-12 text-blue-100 font-light">
-              Full Stack Developer | Tech Innovator | Problem Solver
+              Full Stack Developer | Tech Enthusiast 
             </p>
             <div className="flex justify-center space-x-6">
               <a href="https://github.com/mwesh599" target="_blank" rel="noopener noreferrer" 
@@ -148,7 +148,7 @@ function App() {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="project-card group">
-              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center relative">
+              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjB8fGVjb21tZXJjZXxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                   <p className="text-white text-sm">Built with modern e-commerce best practices</p>
                 </div>
@@ -173,14 +173,14 @@ function App() {
             </div>
 
             <div className="project-card group">
-              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center relative">
+              <div className="h-64 bg-[url('https://plus.unsplash.com/premium_photo-1684330691489-2eb2620db612?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGFza3xlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white text-sm">AI-powered task management and optimization</p>
+                  <p className="text-white text-sm"> Task management and optimization</p>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold">AI Task Manager</h3>
+                  <h3 className="text-2xl font-bold">To Do List App</h3>
                   <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                     <ExternalLink className="w-5 h-5" />
                   </a>
@@ -189,18 +189,104 @@ function App() {
                   Smart task management app that uses AI to categorize, prioritize, and suggest optimal scheduling.
                 </p>
                 <div className="flex flex-wrap gap-2">
-                  <span className="project-tag">TypeScript</span>
-                  <span className="project-tag">OpenAI</span>
-                  <span className="project-tag">Express</span>
-                  <span className="project-tag">MongoDB</span>
+                  <span className="project-tag">Kotlin</span>
+                  <span className="project-tag">Xml</span>
+                  <span className="project-tag">Firebase</span>
+                  <span className="project-tag">Android</span>
                 </div>
               </div>
             </div>
 
             <div className="project-card group">
-              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center relative">
+              <div className="h-64 bg-[url('https://plus.unsplash.com/premium_photo-1677567996070-68fa4181775a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8OXx8Y29sbGVnZXxlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
                   <p className="text-white text-sm">Real-time collaboration platform</p>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold">School  Students Portal</h3>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+                <p className="text-gray-600 mb-4">
+                  Real-time collaboration platform with video calls, document sharing, and team chat functionality.
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  <span className="project-tag">Xampp</span>
+                  <span className="project-tag">php</span>
+                  <span className="project-tag">Javascript</span>
+                  <span className="project-tag">Css</span>
+                </div>
+              </div>
+            </div>
+
+           
+
+
+
+            
+          </div>
+         
+        </div>
+      </section>
+
+
+      {/* events Section */}
+      <section id="projects" className="py-24 bg-gray-50">
+        <div className="max-w-6xl mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="section-title">Events Attended</h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            These Are the Events I Attended: A Journey of Learning, Networking, and Professional Growth.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="project-card group">
+              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QUklMjBlY29ub215fGVufDB8fDB8fHww')] bg-cover bg-center relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                  <p className="text-white text-sm">Role: Attendee </p>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold">7th Students National Economics Symposium</h3>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+                <p className="text-gray-600 mb-4">
+                Skills Demonstrated: <br />Policy analysis, collaborative problem-solving, cross-disciplinary networking.
+                </p>
+                
+              </div>
+            </div>
+
+            <div className="project-card group">
+              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1558685555-bcdb675f9b9a?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dGVjaCUyMGV4cG98ZW58MHx8MHx8fDA%3D')] bg-cover bg-center relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                  <p className="text-white text-sm">Role: Tech Demonstrator</p>
+                </div>
+              </div>
+              <div className="p-6">
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="text-2xl font-bold"> KCAU Tech Expo</h3>
+                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+                    <ExternalLink className="w-5 h-5" />
+                  </a>
+                </div>
+                <p className="text-gray-600 mb-4">
+                Skills Demonstrated: <br/>Technical presentation, entrepreneurial thinking, adaptive learning.
+                </p>
+               
+              </div>
+            </div>
+
+            <div className="project-card group">
+              <div className="h-64 bg-[url('https://plus.unsplash.com/premium_photo-1679079456505-22067531cd11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVhbSUyMHRlY2h8ZW58MHx8MHx8fDA%3D')] bg-cover bg-center relative">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+                  <p className="text-white text-sm">Real-time collaboration</p>
                 </div>
               </div>
               <div className="p-6">
@@ -211,94 +297,14 @@ function App() {
                   </a>
                 </div>
                 <p className="text-gray-600 mb-4">
-                  Real-time collaboration platform with video calls, document sharing, and team chat functionality.
+                functionality.
                 </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="project-tag">WebRTC</span>
-                  <span className="project-tag">Socket.io</span>
-                  <span className="project-tag">Redis</span>
-                  <span className="project-tag">AWS</span>
-                </div>
+                
               </div>
             </div>
-
-            <div className="project-card group">
-              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white text-sm">Advanced data visualization dashboard</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold">Analytics Dashboard</h3>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Interactive analytics dashboard with real-time data visualization and customizable reports.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="project-tag">D3.js</span>
-                  <span className="project-tag">GraphQL</span>
-                  <span className="project-tag">Next.js</span>
-                  <span className="project-tag">Firebase</span>
-                </div>
-              </div>
             </div>
-
-            <div className="project-card group">
-              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1526304640581-d334cdbbf45e?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white text-sm">Mobile-first fitness tracking</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold">Fitness Tracker</h3>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Mobile fitness tracking app with workout plans, progress tracking, and social features.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="project-tag">React Native</span>
-                  <span className="project-tag">Redux</span>
-                  <span className="project-tag">Node.js</span>
-                  <span className="project-tag">MongoDB</span>
-                </div>
-              </div>
             </div>
-
-            <div className="project-card group">
-              <div className="h-64 bg-[url('https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80')] bg-cover bg-center relative">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white text-sm">Educational platform with interactive lessons</p>
-                </div>
-              </div>
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold">Learning Platform</h3>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
-                    <ExternalLink className="w-5 h-5" />
-                  </a>
-                </div>
-                <p className="text-gray-600 mb-4">
-                  Interactive learning platform with video courses, quizzes, and progress tracking.
-                </p>
-                <div className="flex flex-wrap gap-2">
-                  <span className="project-tag">Vue.js</span>
-                  <span className="project-tag">Django</span>
-                  <span className="project-tag">PostgreSQL</span>
-                  <span className="project-tag">AWS</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+            </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-24 bg-white">
@@ -324,7 +330,7 @@ function App() {
               <div className="flex flex-wrap gap-2">
                 <span className="skill-tag">Node.js</span>
                 <span className="skill-tag">Express</span>
-                <span className="skill-tag"> </span>
+                <span className="skill-tag">kotlin </span>
               </div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
@@ -334,7 +340,7 @@ function App() {
               <div className="flex flex-wrap gap-2">
                 <span className="skill-tag">PostgreSQL</span>
                 <span className="skill-tag">MongoDB</span>
-                <span className="skill-tag">Sql</span>
+                <span className="skill-tag">Firebase</span>
               </div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
