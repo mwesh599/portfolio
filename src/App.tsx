@@ -1,7 +1,30 @@
-import React from 'react';
-import { Github, Linkedin, Mail, Code2, Database, Layout, Server, ExternalLink, Star, Rocket, Zap, Brain } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Github, Linkedin, Mail, Code2, Database, Layout, Server, ExternalLink, Star, Rocket, Zap, Brain, Menu, X } from 'lucide-react';
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  // Handle body overflow when menu is open
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.classList.add('menu-open');
+    } else {
+      document.body.classList.remove('menu-open');
+    }
+    
+    return () => {
+      document.body.classList.remove('menu-open');
+    };
+  }, [isMenuOpen]);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   return (
     <div className="min-h-screen">
       {/* Navigation */}
@@ -11,13 +34,43 @@ function App() {
             <h1 className="text-2xl font-bold">
               <span className="gradient-text">Portfolio</span>
             </h1>
-            <div className="flex space-x-6">
+            
+            {/* Desktop Navigation */}
+            <div className="hidden md:flex space-x-6">
               <a href="#about" className="nav-link">About</a>
               <a href="#projects" className="nav-link">Projects</a>
               <a href="#skills" className="nav-link">Skills</a>
               <a href="#contact" className="nav-link">Contact</a>
             </div>
+
+            {/* Mobile Menu Button */}
+            <button 
+              className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+              onClick={toggleMenu}
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
           </div>
+
+          {/* Mobile Navigation */}
+          {isMenuOpen && (
+            <>
+              <div className="mobile-menu-overlay md:hidden" onClick={closeMenu}></div>
+              <div className="mobile-menu">
+                <div className="py-4 px-4 space-y-4">
+                  <a href="#about" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={closeMenu}>About</a>
+                  <a href="#projects" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={closeMenu}>Projects</a>
+                  <a href="#skills" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={closeMenu}>Skills</a>
+                  <a href="#contact" className="block py-2 text-gray-700 hover:text-blue-600 transition-colors" onClick={closeMenu}>Contact</a>
+                </div>
+              </div>
+            </>
+          )}
         </div>
       </nav>
 
@@ -175,7 +228,7 @@ function App() {
             <div className="project-card group">
               <div className="h-64 bg-[url('https://plus.unsplash.com/premium_photo-1684330691489-2eb2620db612?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGFza3xlbnwwfHwwfHx8MA%3D%3D')] bg-cover bg-center relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white text-sm"> Task management and optimization</p>
+                  <p className="text-white text-sm">Task management and optimization</p>
                 </div>
               </div>
               <div className="p-6">
@@ -205,7 +258,7 @@ function App() {
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold">School  Students Portal</h3>
+                  <h3 className="text-2xl font-bold">School Students Portal</h3>
                   <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                     <ExternalLink className="w-5 h-5" />
                   </a>
@@ -215,38 +268,30 @@ function App() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   <span className="project-tag">Xampp</span>
-                  <span className="project-tag">php</span>
-                  <span className="project-tag">Javascript</span>
-                  <span className="project-tag">Css</span>
+                  <span className="project-tag">PHP</span>
+                  <span className="project-tag">JavaScript</span>
+                  <span className="project-tag">CSS</span>
                 </div>
               </div>
             </div>
-
-           
-
-
-
-            
           </div>
-         
         </div>
       </section>
 
-
-      {/* events Section */}
-      <section id="projects" className="py-24 bg-gray-50">
+      {/* Events Section */}
+      <section id="events" className="py-24 bg-gray-50">
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="section-title">Events Attended</h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            These Are the Events I Attended: A Journey of Learning, Networking, and Professional Growth.
+              These Are the Events I Attended: A Journey of Learning, Networking, and Professional Growth.
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="project-card group">
               <div className="h-64 bg-[url('https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8QUklMjBlY29ub215fGVufDB8fDB8fHww')] bg-cover bg-center relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white text-sm">Role: Attendee </p>
+                  <p className="text-white text-sm">Role: Attendee</p>
                 </div>
               </div>
               <div className="p-6">
@@ -257,9 +302,8 @@ function App() {
                   </a>
                 </div>
                 <p className="text-gray-600 mb-4">
-                Skills Demonstrated: <br />Policy analysis, collaborative problem-solving, cross-disciplinary networking.
+                  Skills Demonstrated: <br />Policy analysis, collaborative problem-solving, cross-disciplinary networking.
                 </p>
-                
               </div>
             </div>
 
@@ -271,40 +315,38 @@ function App() {
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold"> KCAU Tech Expo</h3>
+                  <h3 className="text-2xl font-bold">KCAU Tech Expo</h3>
                   <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 </div>
                 <p className="text-gray-600 mb-4">
-                Skills Demonstrated: <br/>Technical presentation, entrepreneurial thinking, adaptive learning.
+                  Skills Demonstrated: <br/>Technical presentation, entrepreneurial thinking, adaptive learning.
                 </p>
-               
               </div>
             </div>
 
             <div className="project-card group">
               <div className="h-64 bg-[url('https://plus.unsplash.com/premium_photo-1679079456505-22067531cd11?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVhbSUyMHRlY2h8ZW58MHx8MHx8fDA%3D')] bg-cover bg-center relative">
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-                  <p className="text-white text-sm">Real-time collaboration</p>
+                  <p className="text-white text-sm">Role: Team Lead</p>
                 </div>
               </div>
               <div className="p-6">
                 <div className="flex justify-between items-start mb-4">
-                  <h3 className="text-2xl font-bold">Team Collab Hub</h3>
+                  <h3 className="text-2xl font-bold">Tech Innovation Summit</h3>
                   <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
                     <ExternalLink className="w-5 h-5" />
                   </a>
                 </div>
                 <p className="text-gray-600 mb-4">
-                functionality.
+                  Skills Demonstrated: <br/>Leadership, innovation strategy, team collaboration.
                 </p>
-                
               </div>
             </div>
-            </div>
-            </div>
-            </section>
+          </div>
+        </div>
+      </section>
 
       {/* Skills Section */}
       <section id="skills" className="py-24 bg-white">
@@ -330,7 +372,7 @@ function App() {
               <div className="flex flex-wrap gap-2">
                 <span className="skill-tag">Node.js</span>
                 <span className="skill-tag">Express</span>
-                <span className="skill-tag">kotlin </span>
+                <span className="skill-tag">Kotlin</span>
               </div>
             </div>
             <div className="bg-white p-8 rounded-xl shadow-lg border border-gray-100">
